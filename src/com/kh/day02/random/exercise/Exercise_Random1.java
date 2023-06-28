@@ -54,3 +54,4 @@ public class Exercise_Random1 {
 		}
 	}
 }
+
