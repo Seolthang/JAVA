@@ -1,0 +1,44 @@
+package com.kh.day13.swing.basic;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Exam_GridLayout extends JFrame{
+	
+	public Exam_GridLayout() {
+		setTitle("GridLayout Sample");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+//		GridLayout grid = new GridLayout(4,2);
+//		grid.setVgap(5);
+		Container c = getContentPane();
+		c.setLayout(new GridLayout(5, 2, 2, 5)); // GridLayout을 5행 2열 수평 2 수직 5로 설정
+		// 한 번에 설정하는 방법과 기본값을 선언한뒤 따로 수평과 수직을 설정하는 방법도 있다.
+//		c.setLayout(grid);
+		
+		
+		c.add(new JLabel(" 이름"));
+		c.add(new JTextField(""));
+		c.add(new JLabel(" 학번"));
+		c.add(new JTextField(""));
+		c.add(new JLabel(" 학과"));
+		c.add(new JTextField(""));
+		c.add(new JLabel(" 과목"));
+		c.add(new JTextField(""));
+		c.add(new JButton("입력"));
+		c.add(new JButton("취소"));
+		
+		
+		setSize(300,200);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Exam_GridLayout();
+	}
+}
